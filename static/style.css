@@ -88,3 +88,10 @@ button:hover {
   align-items: flex-end;
   justify-content: flex-end;
 }
+
+.close-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}

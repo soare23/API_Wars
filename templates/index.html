@@ -30,21 +30,25 @@
 
     <div class="modal-bg">
       <div class="modal" id="modal">
+        <span class="close-trigger" id="modal-inactive-trigger">X</span>
         <h3 id="resident-planet">There are no residents</h3>
         <table class="modal-table" id="modal-table">
-          <tr id="modal-table-headers">
-            <th>Name</th>
-            <th>Height</th>
-            <th>Mass</th>
-            <th>Skin Color</th>
-            <th>Hair Color</th>
-            <th>Eye Color</th>
-            <th>Birth year</th>
-            <th>Gender</th>
-          </tr>
+          <thead>
+            <tr id="modal-table-headers">
+              <th>Name</th>
+              <th>Height</th>
+              <th>Mass</th>
+              <th>Skin Color</th>
+              <th>Hair Color</th>
+              <th>Eye Color</th>
+              <th>Birth year</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody id="modal-table-content"></tbody>
         </table>
         <div class="close-button">
-          <button id="modal-inactive">Close</button>
+          <button id="modal-inactive-button">Close</button>
         </div>
       </div>
     </div>

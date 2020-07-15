@@ -2,9 +2,10 @@ let tableData = document.querySelector('table-data');
 let nextBtn = document.getElementById('next');
 let previousBtn = document.getElementById('previous');
 let table = document.getElementById('table-content');
-let modalTable = document.getElementById('modal-table');
+let modalTable = document.getElementById('modal-table-content');
 let modalBg = document.querySelector('.modal-bg');
-let closeModal = document.querySelector('#modal-inactive');
+let closeModalBtn = document.querySelector('#modal-inactive-button');
+let closeModalTrigger = document.querySelector('#modal-inactive-trigger');
 let residentPlanetName = document.getElementById('resident-planet');
 let nextData = '';
 let previousData = '';
@@ -125,7 +126,11 @@ function clearResidentsTable() {
 
 nextBtn.addEventListener('click', getNextData);
 previousBtn.addEventListener('click', getPreviousData);
-closeModal.addEventListener('click', function () {
+closeModalBtn.addEventListener('click', function () {
+  clearResidentsTable();
+  modalBg.classList.remove('modal-active');
+});
+closeModalTrigger.addEventListener('click', function () {
   clearResidentsTable();
   modalBg.classList.remove('modal-active');
 });
