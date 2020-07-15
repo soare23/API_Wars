@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars Universe Planets</title>
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <header>Star Wars Universe Planets</header>
+    <button class="btn" id="previous">Previous</button>
+    <button class="btn" id="next">Next</button>
+    <div class="container">
+      <table class="main-table" id="main-table">
+        <thead>
+          <tr id="table-headers">
+            <th>Name</th>
+            <th>Diameter</th>
+            <th>Climate</th>
+            <th>Terrain</th>
+            <th>Surface Water</th>
+            <th>Population</th>
+            <th>Residents</th>
+            <th>-</th>
+          </tr>
+        </thead>
+        <tbody id="table-content"></tbody>
+      </table>
+    </div>
+
+    <div class="modal-bg">
+      <div class="modal" id="modal">
+        <h3 id="resident-planet">There are no residents</h3>
+        <table class="modal-table" id="modal-table">
+          <tr id="modal-table-headers">
+            <th>Name</th>
+            <th>Height</th>
+            <th>Mass</th>
+            <th>Skin Color</th>
+            <th>Hair Color</th>
+            <th>Eye Color</th>
+            <th>Birth year</th>
+            <th>Gender</th>
+          </tr>
+        </table>
+        <div class="close-button">
+          <button id="modal-inactive">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="static/script.js"></script>
+  </body>
+</html>

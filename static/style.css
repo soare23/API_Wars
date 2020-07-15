@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  color: purple;
+  font-size: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 3px purple;
+}
+
+table tr,
+td {
+  text-align: center;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+table {
+  width: 100%;
+  border: solid 3px black;
+  border-collapse: collapse;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  background-color: #5c9ead;
+  border-radius: 5px;
+  border: solid #fff;
+  color: #fff;
+  margin: 5px;
+  padding: 2px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #326273;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.4s;
+}
+
+.modal-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #fff;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  border: 5px;
+  border-radius: 5px;
+}
+
+.modal-table {
+  width: 100%;
+}
+
+.close-button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
