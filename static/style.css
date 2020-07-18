@@ -1,24 +1,37 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  background-color: #f9fafb;
+  font-family: 'Open Sans', sans-serif;
+}
+.table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
   color: purple;
-  font-size: 5em;
+  font-size: 4em;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: solid 3px purple;
+  margin: 0;
+}
+.user {
 }
 
 table tr,
@@ -32,6 +45,14 @@ table {
   width: 100%;
   border: solid 3px black;
   border-collapse: collapse;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.btn-container.register {
+  align-self: flex-end;
 }
 
 button,
@@ -94,4 +115,59 @@ button:hover {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.popup-message {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* .form-cotainer {
+  display: flex;
+  flex-direction: column;
+} */
+
+.form {
+  background-color: #f9fafb;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.form {
+  padding: 30px 40px 0px 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
 }

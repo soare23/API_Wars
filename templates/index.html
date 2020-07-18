@@ -8,9 +8,29 @@
   </head>
   <body>
     <header>Star Wars Universe Planets</header>
-    <button class="btn" id="previous">Previous</button>
-    <button class="btn" id="next">Next</button>
-    <div class="container">
+    <div class="btn-container">
+      <button class="btn" id="previous">Previous</button>
+      <button class="btn" id="next">Next</button>
+      <div style="flex: 1;"></div>
+      {% if user %}
+      <div class="user">
+        <h3>Hello {{ user }}</h3>
+        <a href="/logout">
+          <button>Log Out</button>
+        </a>
+      </div>
+      {% else %}
+      <a href="registration" class="register">
+        <button class="btn register" id="register">Register</button>
+      </a>
+      <a href="login" class="register">
+        <button class="btn register" id="register">Log in</button>
+      </a>
+
+      {% endif %}
+      <!-- <h2>Hello {{user}}</h2> -->
+    </div>
+    <div class="table-container">
       <table class="main-table" id="main-table">
         <thead>
           <tr id="table-headers">
@@ -21,7 +41,6 @@
             <th>Surface Water</th>
             <th>Population</th>
             <th>Residents</th>
-            <th>-</th>
           </tr>
         </thead>
         <tbody id="table-content"></tbody>

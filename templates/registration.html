@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <div class="container">
+    <form action="/registration" id="form" class="form" method="POST">
+      <h2>Register With Us</h2>
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %}
+      <div class="popup-message">
+        <p style="margin-top: 10px; margin-bottom: 25px;">{{ message }}</p>
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+      <div class="form-control">
+        <label for="username">Username</label>
+        <input
+          required
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter username"
+          oninvalid="this.setCustomValidity('Please, fill in both fields')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input
+          required
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          oninvalid="this.setCustomValidity('Please, fill in both fields')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <a href="/home"><button>Go back</button></a>
+  </div>
+
+  <script src="static/script.js"></script>
+  <body></body>
+</html>

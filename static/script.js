@@ -36,11 +36,11 @@ function generateTableData(data) {
   data.forEach((element, index) => {
     const tableRow = document.createElement('tr');
     tableRow.innerHTML = `<td>${element.name}</td>
-        <td>${element.diameter}</td>
+        <td>${element.diameter} km</td>
         <td>${element.climate}</td>
         <td>${element.terrain}</td>
-        <td>${element.surface_water}</td>
-        <td>${element.population}</td>
+        <td>${element.surface_water} %</td>
+        <td>${element.population} people</td>
         <td><button class="residents" id=${index}>
         ${
           element.residents.length > 0
@@ -65,8 +65,8 @@ function generateTableData(data) {
             const residentModalRow = document.createElement('tr');
             residentModalRow.innerHTML = `
             <td>${residentData.name}</td>
-            <td>${residentData.height}</td>
-            <td>${residentData.mass}</td>
+            <td>${residentData.height} cm</td>
+            <td>${residentData.mass} kg</td>
             <td>${residentData.skin_color}</td>
             <td>${residentData.hair_color}</td>
             <td>${residentData.eye_color}</td>

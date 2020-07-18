@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <div class="container">
+    <form action="/login" id="form" class="form" method="POST">
+      <h2>Log in</h2>
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %}
+      <div class="popup-message">
+        <p style="margin-top: 10px; margin-bottom: 25px;">{{ message }}</p>
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+      <div class="form-control">
+        <label for="username">Enter your username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter username"
+        />
+      </div>
+      <div class="form-control">
+        <label for="password">Enter your password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+        />
+      </div>
+      <button type="submit">Log in</button>
+    </form>
+    <a href="/home"><button>Go back</button></a>
+  </div>
+
+  <script src="static/script.js"></script>
+  <body></body>
+</html>
