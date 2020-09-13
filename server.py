@@ -22,7 +22,7 @@ def registration():
     username = None
     password = None
     if request.method == "POST":
-        username = request.form.get('username')
+        username = request.form.get('username').lower()
         password = util.hash_password(request.form.get('password'))
         if data_manager.check_user_exists(username):
             flash('The user already exists. Please choose a different username')
@@ -37,7 +37,7 @@ def registration():
 @app.route('/login', methods=["POST", "GET"])
 def login():
     if request.method == "POST":
-        username = request.form.get('username')
+        username = request.form.get('username').lower()
         password = request.form.get('password')
         data = data_manager.get_user_data_by_username(username)
         saved_password = data[0]['password']

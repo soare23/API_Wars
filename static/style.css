@@ -31,7 +31,10 @@ header {
   border-bottom: solid 3px purple;
   margin: 0;
 }
-.user {
+
+.user-area {
+  margin-right: 45px;
+  padding-top: 5px;
 }
 
 table tr,
